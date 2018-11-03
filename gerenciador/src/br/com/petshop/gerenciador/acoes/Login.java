@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import br.com.petshop.gerenciador.modelo.Banco;
+import br.com.petshop.gerenciador.modelo.ClienteDAO;
 import br.com.petshop.gerenciador.modelo.Usuario;
 
 public class Login implements Acao{
@@ -19,7 +19,7 @@ public class Login implements Acao{
 		String login = request.getParameter("user");
 		String password = request.getParameter("senha");
 		
-		Banco banco = new Banco();
+		ClienteDAO banco = new ClienteDAO();
 		
 		Usuario usuario = banco.existeUsuario(login,password);
 		
@@ -28,10 +28,10 @@ public class Login implements Acao{
 		HttpSession sessao = request.getSession();
 		sessao.setAttribute("usuarioLogado", usuario);
 		
-		return "redirect:ControlaRequisicoes?acao=InicioCadastroCliente";
+		return "redirect:paginas?acao=InicioCadastroCliente";
 		
 		}else
-			return "redirect:ControlaRequisicoes?acao=InicioLogin";
+			return "redirect:paginas?acao=InicioLogin";
 	}
 
 }

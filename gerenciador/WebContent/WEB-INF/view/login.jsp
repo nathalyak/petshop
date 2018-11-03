@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:url value="/ControlaRequisicoes" var="linkServletNovoCliente"/>
+<c:url value="/paginas" var="linkServletNovoCliente"/>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,14 +14,14 @@
 		<div class="container">
 			<div id="content-login" class="row justify-content-center">
 	    		<div id="login" class="col-md-3 align-self-center">
-					<form id="form-login" action="${ linkServletNovoCliente}" method="post">
+					<form id="form-login" action="${linkServletNovoCliente}" method="post">
 						<div class="form-group">
 							<label for="usuario">Usuário</label>
    							<input name="user" type="text" class="form-control" id="usuario">
 						</div>
 						<div class="form-group">
 							<label for="senha">Senha</label>
-   							<input name="password" type="text" class="form-control" id="senha">
+   							<input name="senha" type="password" class="form-control" id="senha">
 						</div>
 						<button type="submit" class="btn">Entrar</button>
 						<input type="hidden" name="acao" value="Login">

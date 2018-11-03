@@ -17,7 +17,7 @@ public class Logout implements Acao {
 		HttpSession sessao = request.getSession();
 		sessao.invalidate();
 		
-		return "redirect:ControlaRequisicoes?acao=InicioLogin";
+		return "redirect:paginas?acao=InicioLogin";
 	}
 
 }

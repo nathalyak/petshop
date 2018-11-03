@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.petshop.gerenciador.modelo.Banco;
+import br.com.petshop.gerenciador.modelo.ClienteDAO;
 import br.com.petshop.gerenciador.modelo.Cliente;
 
 public class NovoCliente implements Acao{
@@ -16,19 +16,31 @@ public class NovoCliente implements Acao{
 		PrintWriter writer = response.getWriter();
 
 		String nome = request.getParameter("nome");
+		String telefone = request.getParameter("telefone");
+		String celular = request.getParameter("celular");
+		String dataNascimento = request.getParameter("dataNascimento");
+		String cpfCnpj = request.getParameter("cpfCnpj");
+		String cep = request.getParameter("cep");
+		String numeroEndereco= request.getParameter("numeroEndereco");
+		String planoSaude = request.getParameter("planoSaude");
+		
 		Cliente cliente = new Cliente();
 		
 		//simulação
-		Banco banco = new Banco();
+		ClienteDAO banco = new ClienteDAO();
 		cliente.setNome(nome);
-		banco.adiciona(cliente);
-
-		//jsp
-//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/ListaClientes");
-//		request.setAttribute("nome",cliente.getNome() );
-//		requestDispatcher.forward(request, response);
+		cliente.setCelular(celular);
+		cliente.setCep(cep);
+		cliente.setCpfCnpj(cpfCnpj);
+		cliente.setDataNascimento(dataNascimento);
+		cliente.setNumeroEndereco(Integer.parseInt(numeroEndereco));
+		cliente.setPlanoSaude(planoSaude);
+		cliente.setTelefone(telefone);
 		
-		return "redirect:ControlaRequisicoes?acao=ListaClientes";
+		banco.adicionaCliente(cliente);
+
+
+		return "redirect:paginas?acao=ListaClientes";
 	}
 
 }

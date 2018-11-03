@@ -14,13 +14,15 @@
 	<c:if test="${not empty nome }">
 		Cliente ${nome} cadastrado com sucesso!
 	</c:if>
-	<a href="ControlaRequisicoes?acao=Logout">Sair</a>
+	<a href="paginas?acao=Logout">Sair</a>
 	<ul>	
 		<c:forEach items="${listaNome}" var="clientes">
 			
 			<li>${clientes.nome}
-			<a href="ControlaRequisicoes?acao=RemoveCliente&id=${clientes.id}" > Remove</a>
-			<a href="ControlaRequisicoes?acao=MostraCliente&id=${clientes.id}" > Altera</a></li> 
+			<a href="paginas?acao=RemoveCliente&id=${clientes.id}" > Remover</a>
+			<a href="paginas?acao=MostraCliente&tipo=Altera&id=${clientes.id}" > Alterar</a>
+			<a href="paginas?acao=MostraCliente&tipo=Exibe&id=${clientes.id}" > Exibir dados do cliente</a>
+			</li> 
 		</c:forEach>
 	</ul>
 </body>

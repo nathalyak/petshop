@@ -8,13 +8,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.petshop.gerenciador.modelo.Banco;
+import br.com.petshop.gerenciador.modelo.ClienteDAO;
 import br.com.petshop.gerenciador.modelo.Cliente;
 
 public class ListaClientes  implements Acao{
 	public String executa(HttpServletRequest request,HttpServletResponse response ) throws ServletException,IOException{
 
-		Banco banco = new Banco();
+		ClienteDAO banco = new ClienteDAO();
 		
 		List<Cliente> clientes = banco.getCliente();
 		

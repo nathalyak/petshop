@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<c:url value="/ControlaRequisicoes" var="linkServletAlteraCliente"/>
+<c:url value="/paginas" var="linkServletAlteraCliente"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,15 @@
 	
 
 	<form action="${linkServletAlteraCliente}" method="post">
-		Nome:<input type="text" name="nome" value="${cliente.nome}")>
+		Nome:<input type="text" name="nome" value="${cliente.nome}">
+		Telefone:<input type="tel" name="telefone" value="${cliente.telefone}">
+		Celular:<input type="tel" name="celular" value="${cliente.celular}">
+		Data de Nascimento:<input type="date" name="dataNascimento" value="${cliente.dataNascimento}">
+		CPF/CNPJ:<input type="text" name="cpfCnpj" value="${cliente.cpfCnpj}">
+		CEP:<input type="text" name="cep" value="${cliente.cep}">
+		Número:<input type="number" name="numeroEndereco" value="${cliente.numeroEndereco}">
+		Plano de saúde:<input type="text" name="planoSaude" value="${cliente.planoSaude}">
+		
 		<input type="hidden" name="id" value="${cliente.id}")>
 		<input type="hidden" name="acao" value="AlteraCliente")>
 		<input type="submit">
