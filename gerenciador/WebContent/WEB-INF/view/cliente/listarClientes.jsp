@@ -19,11 +19,12 @@
 		<c:forEach items="${listaNome}" var="clientes">
 			
 			<li>${clientes.nome}
-			<a href="paginas?acao=RemoveCliente&id=${clientes.id}" > Remover</a>
-			<a href="paginas?acao=MostraCliente&tipo=Altera&id=${clientes.id}" > Alterar</a>
-			<a href="paginas?acao=MostraCliente&tipo=Exibe&id=${clientes.id}" > Exibir dados do cliente</a>
+			<a href="paginas?acao=RemoveCliente&pacote=cliente.&id=${clientes.id}" > Remover</a>
+			<a href="paginas?acao=MostraCliente&pacote=cliente.&tipo=Altera&id=${clientes.id}" > Alterar</a>
+			<a href="paginas?acao=MostraCliente&pacote=cliente.&tipo=Exibe&id=${clientes.id}" > Exibir dados do cliente</a>
 			</li> 
 		</c:forEach>
+		<a href="paginas?acao=Index" > Voltar para a tela inicial</a>
 	</ul>
 </body>
 </html>

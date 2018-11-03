@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Altera Cliente</title>
 </head>
 <body>
-	
+	<a href="paginas?acao=Logout">Sair</a>
 
 	<form action="${linkServletAlteraCliente}" method="post">
 		Nome:<input type="text" name="nome" value="${cliente.nome}">
@@ -20,8 +20,9 @@
 		Número:<input type="number" name="numeroEndereco" value="${cliente.numeroEndereco}">
 		Plano de saúde:<input type="text" name="planoSaude" value="${cliente.planoSaude}">
 		
-		<input type="hidden" name="id" value="${cliente.id}")>
-		<input type="hidden" name="acao" value="AlteraCliente")>
+		<input type="hidden" name="id" value="${cliente.id}">
+		<input type="hidden" name="pacote" value="cliente.">
+		<input type="hidden" name="acao" value="AlteraCliente">
 		<input type="submit">
 	</form>
 </body>

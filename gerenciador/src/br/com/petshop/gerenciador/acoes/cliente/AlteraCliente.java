@@ -1,4 +1,4 @@
-package br.com.petshop.gerenciador.acoes;
+package br.com.petshop.gerenciador.acoes.cliente;
 
 import java.io.IOException;
 
@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.petshop.gerenciador.acoes.Acao;
 import br.com.petshop.gerenciador.modelo.ClienteDAO;
 
 public class AlteraCliente implements Acao {
@@ -26,6 +27,6 @@ public class AlteraCliente implements Acao {
 		banco.alterarCliente(Integer.parseInt(codigoCliente), nomeCliente, dataNascimento, cep, numeroEndereco, cpfCnpj,
 				telefone, celular, planoSaude);
 
-		return "redirect:paginas?acao=ListaClientes";
+		return "redirect:paginas?acao=ListaClientes&pacote=cliente.";
 	}
 }

@@ -1,4 +1,4 @@
-package br.com.petshop.gerenciador.acoes;
+package br.com.petshop.gerenciador.acoes.cliente;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.petshop.gerenciador.modelo.ClienteDAO;
+import br.com.petshop.gerenciador.acoes.Acao;
 import br.com.petshop.gerenciador.modelo.Cliente;
 
 public class ListaClientes  implements Acao{

@@ -26,7 +26,9 @@ public class RequisicoesFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) filterResponse;
 		//getParameter para a ação que deve ser tomada
 		String acao = request.getParameter("acao");
-		String nomeClasse ="br.com.petshop.gerenciador.acoes." +acao;
+		String pacote = request.getParameter("pacote");
+		if(pacote==null)pacote="";
+		String nomeClasse ="br.com.petshop.gerenciador.acoes."+pacote+acao;
 		String nomePagina=null;
 
 		try {
@@ -42,10 +44,10 @@ public class RequisicoesFilter implements Filter {
 	
 		//Armazena caminho e tipo
 		String[] tipoEndereco =nomePagina.split(":");
-		
+		String caminhoPagina=pacote.replace( "." , "");
 		//seleciona o tipo de redirecionamento
 		if(tipoEndereco[0].equals("forward")){
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/view/"+tipoEndereco[1]);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/view/"+caminhoPagina+"/"+tipoEndereco[1]);
 			requestDispatcher.forward(request, response);
 			
 		}else if(tipoEndereco[0].equals("redirect")){

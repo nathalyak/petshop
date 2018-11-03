@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-
+	<a href="paginas?acao=Logout">Sair</a>
 	<form action="${ linkServletNovoCliente}" method="post">
 		Nome:<input type="text" name="nome">
 		Telefone:<input type="tel" name="telefone" >
@@ -20,7 +20,7 @@
 		Número:<input type="number" name="numeroEndereco" >
 		Plano de saúde:<input type="text" name="planoSaude">
 		
-		
+		<input type="hidden" name="pacote" value="cliente.">
 		<input type="submit">
 		<input type="hidden" name="acao" value="NovoCliente">
 	</form>

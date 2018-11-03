@@ -28,7 +28,7 @@ public class Login implements Acao{
 		HttpSession sessao = request.getSession();
 		sessao.setAttribute("usuarioLogado", usuario);
 		
-		return "redirect:paginas?acao=InicioCadastroCliente";
+		return "forward:index.html";
 		
 		}else
 			return "redirect:paginas?acao=InicioLogin";

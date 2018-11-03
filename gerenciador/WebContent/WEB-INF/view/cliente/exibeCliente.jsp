@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-
+	<a href="paginas?acao=Logout">Sair</a>
 	<form action="${linkServletAlteraCliente}" method="post">
 		Nome:<input type="text" name="nome" value="${cliente.nome}" disabled>
 		Telefone:<input type="tel" name="telefone" value="${cliente.telefone}" disabled>
@@ -20,6 +20,7 @@
 		Número:<input type="number" name="numeroEndereco" value="${cliente.numeroEndereco}" disabled>
 		Plano de saúde:<input type="text" name="planoSaude" value="${cliente.planoSaude}" disabled>
 		
+		<input type="hidden" name="pacote" value="cliente.">
 		<input type="hidden" name="id" value="${cliente.id}")>
 		<input type="submit" name="acao" value="RemoveCliente">
 		<input type="submit" name="acao" value="ListaClientes">
