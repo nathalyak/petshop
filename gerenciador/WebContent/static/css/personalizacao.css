@@ -1,9 +1,27 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Pacifico', cursive;
+}
+
+body {
+	background-image: url("../image/patinhas.png");
+}
+
+input {
+	border-radius: 10px;
+    border: 1px solid #FFA4E6 !important;
+}
+ 
+label {
+	font-size: 1.1rem;
+}
+
 #content-login {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url("../image/patinhas.png");
 }
 
 #login {
@@ -12,10 +30,98 @@
     justify-content: center;
     height: 50%;
     width: 40%;
-    background-color: #fff;
+    background-color: #80f5de;
+    border-radius: 10px;
+    color:white;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+#titulo-login {
+	margin-bottom: 15px;
 }
 
 #form-login {
 	width: 100%;
 }
 
+#login-logo {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#button-login {
+    background: #FFA4E6;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 15px;	
+}
+
+.container {
+	background-color: white;
+}    
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+   	color: #FFA4E6 !important;
+   	border-color: #80F5DE #80F5DE #fff;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #80F5DE;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: #80F5DE !important;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #FFA4E6 #FFA4E6 #FFA4E6;
+    
+}
+
+.nav-link {
+	color: #80F5DE !important;
+}
+
+.nav-tabs .dropdown-menu {
+	background-color: #FFA4E6; 
+}
+
+.nav-tabs .dropdown-menu a {
+	color: white; 
+}
+
+#titulo-principal {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    color: #80F5DE;
+}
+
+div#quadros-index {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.quadro {
+    color: #FFA4E6;
+    border: 3px solid #FFA4E6;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.quadro h3 {
+	text-align: center;
+}
+
+.quadro a {
+	color: black;
+}
+
+.quadro ul {
+    list-style-type: none;
+}
