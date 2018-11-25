@@ -13,18 +13,8 @@ public class ClienteDAO {
 	private static Integer idCliente=0;
 	
 	private static List<Cliente> clientes= new ArrayList<>();
-	private static List<Usuario> usuarios= new ArrayList<>();
-	static {
-		
-		Usuario usuario1 = new Usuario();
-		usuario1.setLogin("giovanne");
-		usuario1.setSenha("senha1");
-		usuarios.add(usuario1);
-		Usuario usuario2 = new Usuario();
-		usuario2.setLogin("giovanne2");
-		usuario2.setSenha("senha2");
-		usuarios.add(usuario2);
-	}
+
+
 	public void adicionaCliente(Cliente cliente) {
 		try {
 			String sql="Insert into "
