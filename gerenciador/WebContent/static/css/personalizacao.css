@@ -24,17 +24,21 @@ label {
     background-image: url("../image/patinhas.png");
 }
 
+#content-form {
+    padding: 30px;
+    border-radius: 10px;
+}
+
 #login {
     align-items: center;
     display: flex;  
     justify-content: center;
-    height: 50%;
+    height: auto;
     width: 40%;
     background-color: #80f5de;
     border-radius: 10px;
     color:white;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding: 30px !important;
 }
 
 #titulo-login {
@@ -50,7 +54,7 @@ label {
 	margin-bottom: 15px;
 }
 
-#button-login {
+#button-style {
     background: #FFA4E6;
     color: white;
     width: 100%;
@@ -107,7 +111,7 @@ div#quadros-index {
 }
 
 .quadro {
-    color: #FFA4E6;
+    color: #80F5DE;
     border: 3px solid #FFA4E6;
     margin-bottom: 30px;
     padding: 15px;
@@ -124,4 +128,8 @@ div#quadros-index {
 
 .quadro ul {
     list-style-type: none;
+}
+
+.icon-patinha {
+	height: 14px;
 }
