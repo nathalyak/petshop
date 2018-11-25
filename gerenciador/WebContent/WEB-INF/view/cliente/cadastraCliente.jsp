@@ -13,41 +13,77 @@
 		<link rel="shortcut icon" type="image/png" href="./static/image/logo.png"/>
 	</head>
 	<body>
-		<a href="paginas?acao=Logout">Sair</a>
 		<div id="content-form" class="container justify-content-center">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="paginas">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroCliente&pacote=cliente.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaClientes&pacote=cliente.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Veterinario</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroVeterinario&pacote=veterinario.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaVeterinarios&pacote=veterinario.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pets</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroPet&pacote=pet.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaPets&pacote=pet.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroAgendamento&pacote=agendamento.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaAgendamentos&pacote=agendamento.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="paginas?acao=Logout">Sair</a>
+				</li>		
+			</ul>
 			<form action="${ linkServletNovoCliente}" method="post">
+				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/cliente.svg">Cadastro de cliente</h2>
 				<div class="row">
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="nome">Nome</label>
-  							<input id="nome" name="nome" type="text" class="form-control">
+  						<input id="nome" name="nome" type="text" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="telefone">Telefone</label>
-  							<input id="telefone" name="telefone" type="tel" class="form-control">
+  						<input id="telefone" name="telefone" type="tel" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="celular">Celular</label>
-  							<input id="celular" name="celular" type="tel" class="form-control">
+  						<input id="celular" name="celular" type="tel" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="dataNascimento">Data de Nascimento</label>
-  							<input id="dataNascimento" name="dataNascimento" type="date" class="form-control">
+  						<input id="dataNascimento" name="dataNascimento" type="date" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cpfCnpj">CPF/CNPJ</label>
-  							<input id="cpfCnpj" name="cpfCnpj" type="text" class="form-control">
+ 						<input id="cpfCnpj" name="cpfCnpj" type="text" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cep">CEP</label>
-  							<input id="cep" name="cep" type="text" class="form-control">
+  						<input id="cep" name="cep" type="text" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="numeroEndereco">Número</label>
-  							<input id="numeroEndereco" name="numeroEndereco" type="number" class="form-control">
+  						<input id="numeroEndereco" name="numeroEndereco" type="number" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="planoSaude">Plano de saúde</label>
-  							<input id="planoSaude" name="planoSaude" type="text" class="form-control">
+  						<input id="planoSaude" name="planoSaude" type="text" class="form-control">
 					</div>						
 					<input type="hidden" name="pacote" value="cliente.">
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">
@@ -56,8 +92,12 @@
 					<input type="hidden" name="acao" value="NovoCliente">
 				</div>	
 			</form>
-			<script type="text/javascript" src="./static/js/jquery.js"></script>
-			<script type="text/javascript" src="./static/js/materialize.min.js"></script>
+			<script src="./static/js/jquery.js"></script>
+			<script src="./static/js/popper.min.js"></script>
+			<script src="./static/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
+				$('.dropdown-toggle').dropdown()
+			</script>
 		</div>
 	</body>
 </html>

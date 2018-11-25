@@ -12,25 +12,43 @@
 		<div class="container">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#">Home</a>
+					<a class="nav-link active" href="paginas">Home</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroCliente&pacote=cliente.">Cadastrar</a>
-						<a class="dropdown-item" href="paginas?acao=ListaClientes&pacote=cliente.">Listar</a>
-						
-						<a class="dropdown-item" href="#">Editar</a>
-						<a class="dropdown-item" href="#">Excluir</a>
+						<a class="dropdown-item" href="paginas?acao=ListaClientes&pacote=cliente.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Veterinario</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroVeterinario&pacote=veterinario.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaVeterinarios&pacote=veterinario.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pets</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroPet&pacote=pet.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaPets&pacote=pet.">Lista</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="paginas?acao=InicioCadastroAgendamento&pacote=agendamento.">Cadastrar</a>
+						<a class="dropdown-item" href="paginas?acao=ListaAgendamentos&pacote=agendamento.">Lista</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="paginas?acao=Logout">Sair</a>
 				</li>		
 			</ul>
-			<h1 id="titulo-principal">Pet Care</h1>
+			<h1 id="titulo-principal"><img src="./static/image/logo.svg"> Pet Care</h1>
 			<div id="quadros-index" class="row justify-content-center">
-				<div class="col-12 col-sm-6 col-md-4">
+				<div class="col-12 col-md-6">
 					<div class="quadro">
 						<h3>Cliente</h3>
 						<ul>
@@ -43,7 +61,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-4">
+				<div class="col-12 col-md-6">
 					<div class="quadro">
 						<h3>Veterinário</h3>
 						<ul>
@@ -57,7 +75,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-12 col-sm-6 col-md-4">
+				<div class="col-12 col-md-6">
 					<div class="quadro">
 						<h3>Pet</h3>
 						<ul>
@@ -66,6 +84,19 @@
 							</li>
 							<li>
 								<a href="paginas?acao=ListaPets&pacote=pet."><img class="icon-patinha" src="./static/image/pata.svg" > Listar </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="quadro">
+						<h3>Agendamento</h3>
+						<ul>
+							<li>
+								<a href="paginas?acao=InicioCadastroAgendamento&pacote=agendamento."><img class="icon-patinha" src="./static/image/pata.svg" > Cadastrar </a>
+							</li>
+							<li>
+								<a href="paginas?acao=ListaAgendamentos&pacote=agendamento."><img class="icon-patinha" src="./static/image/pata.svg" > Listar </a>
 							</li>
 						</ul>
 					</div>

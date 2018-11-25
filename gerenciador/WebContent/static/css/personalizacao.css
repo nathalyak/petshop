@@ -25,8 +25,12 @@ label {
 }
 
 #content-form {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
     border-radius: 10px;
+}
+
+#content-form h2 {
+	margin: 60px 0 45px 0;
 }
 
 #login {
@@ -66,6 +70,7 @@ label {
 
 .container {
 	background-color: white;
+	height: 100%;
 }    
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -102,7 +107,6 @@ label {
     text-align: center;
     margin-top: 90px;
     margin-bottom: 60px;
-    color: #80F5DE;
 }
 
 div#quadros-index {
@@ -111,7 +115,6 @@ div#quadros-index {
 }
 
 .quadro {
-    color: #80F5DE;
     border: 3px solid #FFA4E6;
     margin-bottom: 30px;
     padding: 15px;
@@ -120,6 +123,7 @@ div#quadros-index {
 
 .quadro h3 {
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 .quadro a {
@@ -132,4 +136,37 @@ div#quadros-index {
 
 .icon-patinha {
 	height: 14px;
+}
+
+#alinhamento-icon {
+	height: 70px;
+    margin-right: 20px;
+    border: 3px solid #80F5DE;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+#lista {
+	border-radius: 10px;
+}
+
+#lista li {
+	margin-top: 1rem;
+	border-bottom: 1px solid #FFA4E6;
+}
+
+#lista li a{
+	text-align: center;
+}
+
+.icon-lista {
+	height: 15px;
+	text-align: center;
+}
+
+#info-lista {
+    background-color: #FFA4E6;
+    color: white;
+    font-weight: 600;
+    padding-top: 1rem;
 }
