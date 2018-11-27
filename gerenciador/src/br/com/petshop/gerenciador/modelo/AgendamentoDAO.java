@@ -175,6 +175,7 @@ public class AgendamentoDAO {
 		PreparedStatement statement;
 		try {
 
+			
 			statement = con.conecta(sql);
 
 			statement.executeUpdate();
