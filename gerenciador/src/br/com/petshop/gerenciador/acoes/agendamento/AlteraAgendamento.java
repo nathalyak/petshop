@@ -16,7 +16,7 @@ public class AlteraAgendamento implements Acao {
 		String idAgendamento = request.getParameter("idAgendamento");
 		String idVeterinario = request.getParameter("idVeterinario");
 		String idPet = request.getParameter("idPet");
-		String idCliente = request.getParameter("idCliente");
+		String idCliente = request.getParameter("idDono");
 		String data = request.getParameter("data");
 		String hora  = request.getParameter("hora");
 		AgendamentoDAO banco = new AgendamentoDAO();
