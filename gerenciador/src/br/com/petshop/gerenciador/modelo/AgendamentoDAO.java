@@ -3,6 +3,8 @@ package br.com.petshop.gerenciador.modelo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,7 +28,7 @@ public class AgendamentoDAO {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
 		SimpleDateFormat form = new SimpleDateFormat("HH:mm");
 		Date data = null;
-		java.sql.Time hora = null;
+		Time hora = null;
 		
 		try {
 			data = formatter.parse(agendamento.getData());
@@ -40,7 +42,7 @@ public class AgendamentoDAO {
 		statement.setInt(2, agendamento.getIdPet());
 		statement.setInt(3, agendamento.getIdCliente());
 		statement.setDate(4, java.sql.Date.valueOf(formatter.format(data)));
-		statement.setTime(5 ,hora);
+		statement.setString(5 ,hora.toString());
 		statement.executeUpdate();
 		
 		con.desconecta();

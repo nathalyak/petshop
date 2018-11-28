@@ -85,7 +85,7 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idCliente">Selecione uma data:</label>
-  						<input id="idCliente" name="idCliente" type="data" class="form-control" required>
+  						<input id="idCliente" name="data" type="date" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="hora">Selecione um horário:</label>
