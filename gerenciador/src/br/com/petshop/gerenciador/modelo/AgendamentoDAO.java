@@ -152,39 +152,5 @@ public class AgendamentoDAO {
 		
 	}
 
-	public void alterarAgendamento(int idAgendamento, int idPet, int idVeterinario, int idCliente, String data, String hora) {
-		// TODO Auto-generated method stub
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
-		SimpleDateFormat form = new SimpleDateFormat("HH:mm");
-		Date dataC = null;
-		Date horaC =null;
-		try {
-			dataC = formatter.parse(data);
-			horaC = new java.sql.Time(form.parse(hora).getTime());
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		String sql="UPDATE agendamento SET "
-				+ "fkVeterinario='"+idVeterinario+"',"
-				+ "fkPet='"+idPet+"',"
-				+ "fkCliente='"+idCliente+"',"
-				+ "dataAgendamento='"+ java.sql.Date.valueOf(formatter.format(dataC)) +"',"
-				+ "horaAgendamento='"+ horaC +"' where pkAgendamento like "+idAgendamento;
-		PreparedStatement statement;
-		try {
-
-			
-			statement = con.conecta(sql);
-
-			statement.executeUpdate();
-			con.desconecta();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
 	
 }

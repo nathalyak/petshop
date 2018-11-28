@@ -20,7 +20,6 @@
 			
 			<li>${agendamentos.idAgendamento} | ${agendamentos.nomeCliente} | ${agendamentos.data} | ${agendamentos.hora}
 			<a href="paginas?acao=RemoveAgendamento&pacote=agendamento.&id=${agendamentos.idAgendamento}" > Remover</a>
-			<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Altera&id=${agendamentos.idAgendamento}" > Alterar</a>
 			<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Exibe&id=${agendamentos.idAgendamento}" > Exibir dados do agendamento</a>
 			</li> 
 		</c:forEach>
