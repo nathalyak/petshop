@@ -16,10 +16,10 @@
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="paginas">Home</a>
+					<a class="nav-link" href="paginas">Home</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
+					<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroCliente&pacote=cliente.">Cadastrar</a>
 						<a class="dropdown-item" href="paginas?acao=ListaClientes&pacote=cliente.">Lista</a>
@@ -55,35 +55,35 @@
 				<div class="row">
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="nome">Nome</label>
-  						<input id="nome" name="nome" type="text" class="form-control">
+  						<input id="nome" name="nome" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="telefone">Telefone</label>
-  						<input id="telefone" name="telefone" type="tel" class="form-control">
+  						<input id="telefone" name="telefone" type="tel" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="celular">Celular</label>
-  						<input id="celular" name="celular" type="tel" class="form-control">
+  						<input id="celular" name="celular" type="tel" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="dataNascimento">Data de Nascimento</label>
-  						<input id="dataNascimento" name="dataNascimento" type="date" class="form-control">
+  						<input id="dataNascimento" name="dataNascimento" type="date" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cpfCnpj">CPF/CNPJ</label>
- 						<input id="cpfCnpj" name="cpfCnpj" type="text" class="form-control">
+ 						<input id="cpfCnpj" name="cpfCnpj" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cep">CEP</label>
-  						<input id="cep" name="cep" type="text" class="form-control">
+  						<input id="cep" name="cep" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="numeroEndereco">Número</label>
-  						<input id="numeroEndereco" name="numeroEndereco" type="number" class="form-control">
+  						<input id="numeroEndereco" name="numeroEndereco" type="number" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="planoSaude">Plano de saúde</label>
-  						<input id="planoSaude" name="planoSaude" type="text" class="form-control">
+  						<input id="planoSaude" name="planoSaude" type="text" class="form-control" required>
 					</div>						
 					<input type="hidden" name="pacote" value="cliente.">
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">

@@ -1,12 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="java.util.List,br.com.petshop.gerenciador.modelo.Cliente" %>
-<c:url value="/paginas" var="linkServletNovoPet"/>
+
+<c:url value="/paginas" var="linkServletAlteraPet"/>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Pet Care | Cadastro de Pet</title>
+		<title>Pet Care | Dados do Pet</title>
 		<link type="text/css" rel="stylesheet" href="./static/css/bootstrap.min.css" />
 		<link type="text/css" rel="stylesheet" href="./static/css/personalizacao.css" />
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
@@ -50,19 +50,22 @@
 					<a class="nav-link" href="paginas?acao=Logout">Sair</a>
 				</li>		
 			</ul>
-			<form action="${ linkServletNovoPet}" method="post">
-				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/pet.svg">Cadastro de Pet</h2>
+			<form action="${linkServletAlteraPet}" method="post">
+				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/pet.svg">Dados de ${pet.nomePet}</h2>
 				<div class="row">
 					<div class="form-group col-12">
 						<label for="nomePet">Nome do pet</label>
-  						<input id="nomePet" name="nomePet" type="text" class="form-control" required>
+  						<input id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}" disabled>
 					</div>
 					<div class="form-group col-12 col-md-6">
-						<label for="idDono">Responsável</label>
-  						<select id="idDono" name="idDono" class="form-control" required>
+						<label for="idDono">Responsável</label>						
+						<select id="idDono" name="idDono" class="form-control" disabled>
 						    <c:forEach  items="${listaNome}" var="clientes">
-						        <option value="<c:out value='${clientes.id}' />"
-						            <c:if test="${param.selectValue == clientes})"> selected </c:if>  >
+						        <option value="<c:out value='${clientes.id}'/>"
+						            <c:if test="${clientes.id == pet.idDono}"> 
+						            selected 
+						            </c:if> 
+						             >
 						            <c:out value="${clientes.nome}" />
 						        </option>
 						    </c:forEach>
@@ -70,21 +73,16 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="especie">Espécie</label>
-  						<input id="especie" name="especie" type="text" class="form-control" required>
+  						<input id="especie" name="especie" type="text" class="form-control" value="${pet.especie}" disabled>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="raca">Raça</label>
-  						<input id="raca" name="raca" type="text" class="form-control" required>
+  						<input id="raca" name="raca" type="text" class="form-control" value="${pet.raca}" disabled>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="porte">Porte</label>
-  						<input id="porte" name="porte" type="text" class="form-control" required>
+  						<input id="porte" name="porte" type="text" class="form-control" value="${pet.porte}" disabled> 
 					</div>
-					<div class="col-12 col-md-6 offset-md-3 align-self-center">
-						<button id="button-style" type="submit" class="btn">Cadastrar</button>
-					</div>							
-					<input type="hidden" name="pacote" value="pet.">
-					<input type="hidden" name="acao" value="NovoPet">
 				</div>
 			</form>
 			<script src="./static/js/jquery.js"></script>

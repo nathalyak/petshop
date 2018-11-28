@@ -16,10 +16,10 @@
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="paginas">Home</a>
+					<a class="nav-link" href="paginas">Home</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
+					<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroCliente&pacote=cliente.">Cadastrar</a>
 						<a class="dropdown-item" href="paginas?acao=ListaClientes&pacote=cliente.">Lista</a>
