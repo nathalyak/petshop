@@ -29,7 +29,7 @@
 							<label for="senha">Senha</label>
    							<input name="senha" type="password" class="form-control" id="senha">
 						</div>
-						<button id="button-login" type="submit" class="btn">Entrar</button>
+						<button id="button-style" type="submit" class="btn">Entrar</button>
 						<input type="hidden" name="acao" value="Login">
 					</form>
 					<script type="text/javascript" src="./static/js/jquery.js"></script>
