@@ -3,8 +3,7 @@
 <c:url value="/paginas" var="linkServletAlteraVeterinario"/>
 <!DOCTYPE html>
 <html>
-<head>
-<head>
+	<head>
 		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Pet Care | Alterar Veterinário</title>
@@ -52,7 +51,6 @@
 				</li>		
 			</ul>
 			<form action="${linkServletAlteraVeterinario}" method="post">
-			<form action="${linkServletAlteraCliente}" method="post">
 				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/veterinario.svg">Editar ${veterinario.nomeVeterinario}</h2>
 				<div class="row">
 					<div class="form-group col-12 align-self-center">

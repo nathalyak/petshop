@@ -10,6 +10,11 @@ input {
 	border-radius: 10px;
     border: 1px solid #FFA4E6 !important;
 }
+
+select {
+	border-radius: 10px;
+    border: 1px solid #FFA4E6 !important;
+}
  
 label {
 	font-size: 1.1rem;

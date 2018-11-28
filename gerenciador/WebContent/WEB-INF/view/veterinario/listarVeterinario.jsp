@@ -60,7 +60,7 @@
 				<h2 class="text-center col-12"><img id="alinhamento-icon" src="./static/image/veterinario.svg">Lista de veterinários</h2>
 				<ul id="lista" class="col-12">
 					<li id="info-lista" class="row">
-						<h5 class="col-4 col-md-9">Nome do cliente</h5>
+						<h5 class="col-4 col-md-9">Nome do veterinário</h5>
 						<h5 class="col-2 col-md-1">Dados</h5>
 						<h5 class="col-2 col-md-1">Editar</h5>
 						<h5 class="col-2 col-md-1">Excluir</h5>

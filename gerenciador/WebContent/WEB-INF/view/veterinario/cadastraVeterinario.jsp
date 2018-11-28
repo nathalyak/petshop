@@ -3,7 +3,8 @@
 <c:url value="/paginas" var="linkServletNovoVeterinario"/>
 <!DOCTYPE html>
 <html>
-	<meta charset="ISO-8859-1">
+	<head>
+		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Pet Care | Cadastro de Veterinário</title>
 		<link type="text/css" rel="stylesheet" href="./static/css/bootstrap.min.css" />
