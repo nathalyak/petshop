@@ -16,7 +16,7 @@
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="paginas">Home</a>
+					<a class="nav-link" href="paginas?acao=Index&pacote=home.">Home</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
@@ -26,7 +26,7 @@
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Veterinario</a>
+					<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Veterinario</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroVeterinario&pacote=veterinario.">Cadastrar</a>
 						<a class="dropdown-item" href="paginas?acao=ListaVeterinarios&pacote=veterinario.">Lista</a>
@@ -55,39 +55,39 @@
 				<div class="row">
 					<div class="form-group col-12 align-self-center">
 						<label for="nomeVeterinario">Nome do veterinário</label>
-  						<input required id="nomeVeterinario" name="nomeVeterinario" type="text" class="form-control">
+  						<input id="nomeVeterinario" name="nomeVeterinario" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cep">CEP</label>
-  						<input  required id="cep" name="cep" type="text" class="form-control">
+  						<input id="cep" name="cep" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="numero">Número</label>
-  						<input required id="numero" name="numero" type="number" class="form-control">
+  						<input id="numero" name="numero" type="number" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cpfCnpj">CPF/CNPJ</label>
- 						<input required id="cpfCnpj" name="cpfCnpj" type="text" class="form-control">
+ 						<input id="cpfCnpj" name="cpfCnpj" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="dataNascimento">Data de Nascimento</label>
-  						<input required id="dataNascimento" name="dataNascimento" type="date" class="form-control">
+  						<input id="dataNascimento" name="dataNascimento" type="date" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="telefone">Telefone</label>
-  						<input required id="telefone" name="telefone" type="tel" class="form-control">
+  						<input id="telefone" name="telefone" type="tel" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="celular">Celular</label>
-  						<input required id="celular" name="celular" type="tel" class="form-control">
+  						<input id="celular" name="celular" type="tel" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="numeroRegistro">Número de registro</label>
- 						<input required id="numeroRegistro" name="numeroRegistro" type="text" class="form-control">
+ 						<input id="numeroRegistro" name="numeroRegistro" type="text" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="formacao">Formação</label>
- 						<input required id="formacao" name="formacao" type="text" class="form-control">
+ 						<input id="formacao" name="formacao" type="text" class="form-control" required>
 					</div>		
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">
 						<button id="button-style" type="submit" class="btn">Cadastrar</button>

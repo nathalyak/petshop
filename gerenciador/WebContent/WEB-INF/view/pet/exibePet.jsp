@@ -1,24 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.List,br.com.petshop.gerenciador.modelo.Pet" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+<c:url value="/paginas" var="linkServletAlteraPet"/>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Pet Care | Lista de Pet</title>
+		<title>Pet Care | Dados do Pet</title>
 		<link type="text/css" rel="stylesheet" href="./static/css/bootstrap.min.css" />
 		<link type="text/css" rel="stylesheet" href="./static/css/personalizacao.css" />
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
 		<link rel="shortcut icon" type="image/png" href="./static/image/logo.png"/>
 	</head>
 	<body>
-		<c:if test="${not empty nome }">
-			Pet ${nome} cadastrado com sucesso!
-		</c:if>
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
@@ -56,34 +50,47 @@
 					<a class="nav-link" href="paginas?acao=Logout">Sair</a>
 				</li>		
 			</ul>
-			<c:if test="${not empty nome }">
-				Veterinario ${nome} cadastrado com sucesso!
-			</c:if>
-			<div class="row">
-				<h2 class="text-center col-12"><img id="alinhamento-icon" src="./static/image/pet.svg">Lista de pets</h2>
-				<ul id="lista" class="col-12">
-					<li id="info-lista" class="row">
-						<h5 class="col-4 col-md-9">Nome do pet</h5>
-						<h5 class="col-2 col-md-1">Dados</h5>
-						<h5 class="col-2 col-md-1">Editar</h5>
-						<h5 class="col-2 col-md-1">Excluir</h5>
-					</li> 	
-					<c:forEach items="${listaNome}" var="pets">
-						<li class="row">
-							<p class="col-4 col-md-9">${pets.nomePet}</p>
-							<a class="col-2 col-md-1" href="paginas?acao=MostraPet&pacote=pet.&tipo=Exibe&id=${pets.idPet}" ><img class="icon-lista" src="./static/image/informacoes.svg"></a>
-							<a class="col-2 col-md-1" href="paginas?acao=MostraPet&pacote=pet.&tipo=Altera&id=${pets.idPet}" ><img class="icon-lista" src="./static/image/lapis.svg"></a>
-							<a class="col-2 col-md-1" href="paginas?acao=RemovePet&pacote=pet.&id=${pets.idPet}" ><img class="icon-lista" src="./static/image/lixo.svg"></a>
-						</li> 
-					</c:forEach>
-				</ul>
-			</div>
+			<form action="${linkServletAlteraPet}" method="post">
+				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/pet.svg">Dados de ${pet.nomePet}</h2>
+				<div class="row">
+					<div class="form-group col-12">
+						<label for="nomePet">Nome do pet</label>
+  						<input id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}" disabled>
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label for="idDono">Responsável</label>						
+						<select id="idDono" name="idDono" class="form-control" disabled>
+						    <c:forEach  items="${listaNome}" var="clientes">
+						        <option value="<c:out value='${clientes.id}'/>"
+						            <c:if test="${clientes.id == pet.idDono}"> 
+						            selected 
+						            </c:if> 
+						             >
+						            <c:out value="${clientes.nome}" />
+						        </option>
+						    </c:forEach>
+						</select>
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label for="especie">Espécie</label>
+  						<input id="especie" name="especie" type="text" class="form-control" value="${pet.especie}" disabled>
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label for="raca">Raça</label>
+  						<input id="raca" name="raca" type="text" class="form-control" value="${pet.raca}" disabled>
+					</div>
+					<div class="form-group col-12 col-md-6">
+						<label for="porte">Porte</label>
+  						<input id="porte" name="porte" type="text" class="form-control" value="${pet.porte}" disabled> 
+					</div>
+				</div>
+			</form>
+			<script src="./static/js/jquery.js"></script>
+			<script src="./static/js/popper.min.js"></script>
+			<script src="./static/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
+				$('.dropdown-toggle').dropdown()
+			</script>
 		</div>
-		<script src="./static/js/jquery.js"></script>
-		<script src="./static/js/popper.min.js"></script>
-		<script src="./static/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			$('.dropdown-toggle').dropdown()
-		</script>
 	</body>
 </html>

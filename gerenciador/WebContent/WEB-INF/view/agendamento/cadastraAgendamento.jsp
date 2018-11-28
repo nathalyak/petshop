@@ -16,7 +16,7 @@
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="paginas">Home</a>
+					<a class="nav-link" href="paginas?acao=Index&pacote=home.">Home</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
@@ -40,7 +40,7 @@
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
+					<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Consultas</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroAgendamento&pacote=agendamento.">Cadastrar</a>
 						<a class="dropdown-item" href="paginas?acao=ListaAgendamentos&pacote=agendamento.">Lista</a>
@@ -54,18 +54,8 @@
 				<h2 class="text-center"><img id="alinhamento-icon" src="./static/image/pet.svg">Agendamento de Horário</h2>
 				<div class="row">
 					<div class="form-group col-12">
-						<label for="idVeterinario">Selecione um veterinário:</label>
-  						<select required  name="idVeterinario">
-						    <c:forEach  items="${listaNomeV}" var="veterinarios">
-						        <option value="<c:out value='${veterinarios.idVeterinario}'/>">
-						            <c:out value="${veterinarios.nomeVeterinario}" />
-						        </option>
-						    </c:forEach>
-						</select>
-					</div>
-					<div class="form-group col-12 col-md-6">
 						<label for="idPet">Selecione um Pet:</label>
-  						<select required  name="idPet">
+  						<select id="idPet" name="idPet" class="form-control" required>
 						    <c:forEach  items="${listaNomeP}" var="pets">
 						        <option value="<c:out value='${pets.idPet}'/>">
 						            <c:out value="${pets.nomePet}" />
@@ -74,8 +64,18 @@
 						</select>
 					</div>
 					<div class="form-group col-12 col-md-6">
+						<label for="idVeterinario">Selecione um veterinário:</label>
+  						<select id="idVeterinario" name="idVeterinario" class="form-control" required>
+						    <c:forEach  items="${listaNomeV}" var="veterinarios">
+						        <option value="<c:out value='${veterinarios.idVeterinario}'/>">
+						            <c:out value="${veterinarios.nomeVeterinario}" />
+						        </option>
+						    </c:forEach>
+						</select>
+					</div>
+					<div class="form-group col-12 col-md-6">
 						<label for="idCliente">Selecione um cliente:</label>
-  						<select required name="idDono">
+  						<select id="idDono" name="idDono" class="form-control" required>
 						    <c:forEach  items="${listaNomeC}" var="clientes">
 						        <option value="<c:out value='${clientes.id}'/>">
 						            <c:out value="${clientes.nome}" />
@@ -85,11 +85,11 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idCliente">Selecione uma data:</label>
-  						<input required id="idCliente" name="data" type="date" class="form-control">
+  						<input id="idCliente" name="idCliente" type="data" class="form-control" required>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="hora">Selecione um horário:</label>
-  						<input required id="hora" name="hora" type="time" class="form-control">
+  						<input id="hora" name="hora" type="time" class="form-control" required>
 					</div>
 					<input type="hidden" name="pacote" value="agendamento.">
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">

@@ -16,7 +16,7 @@
 		<div id="content-form" class="container justify-content-center">
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="paginas">Home</a>
+					<a class="nav-link" href="paginas?acao=Index&pacote=home.">Home</a>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
@@ -33,7 +33,7 @@
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pets</a>
+					<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pets</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="paginas?acao=InicioCadastroPet&pacote=pet.">Cadastrar</a>
 						<a class="dropdown-item" href="paginas?acao=ListaPets&pacote=pet.">Lista</a>
@@ -55,11 +55,11 @@
 				<div class="row">
 					<div class="form-group col-12">
 						<label for="nomePet">Nome do pet</label>
-  						<input required id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}">
+  						<input id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}" required>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idDono">Responsável</label>						
-						<select required id="idDono" name="idDono" class="form-control">
+						<select id="idDono" name="idDono" class="form-control" required>
 						    <c:forEach  items="${listaNome}" var="clientes">
 						        <option value="<c:out value='${clientes.id}'/>"
 						            <c:if test="${clientes.id == pet.idDono}"> 
@@ -73,15 +73,15 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="especie">Espécie</label>
-  						<input required id="especie" name="especie" type="text" class="form-control" value="${pet.especie}">
+  						<input id="especie" name="especie" type="text" class="form-control" value="${pet.especie}" required>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="raca">Raça</label>
-  						<input required id="raca" name="raca" type="text" class="form-control" value="${pet.raca}">
+  						<input id="raca" name="raca" type="text" class="form-control" value="${pet.raca}" required>
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="porte">Porte</label>
-  						<input required id="porte" name="porte" type="text" class="form-control" value="${pet.porte}">
+  						<input id="porte" name="porte" type="text" class="form-control" value="${pet.porte}" required>
 					</div>
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">
 						<button id="button-style" type="submit" class="btn">Editar</button>
