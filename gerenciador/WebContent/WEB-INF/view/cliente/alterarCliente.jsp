@@ -55,35 +55,35 @@
 				<div class="row">
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="nome">Nome</label>
-						<input id="nome" name="nome" value="${cliente.nome}" type="text" class="form-control" >
+						<input required id="nome" name="nome" value="${cliente.nome}" type="text" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="telefone">Telefone</label>
-						<input id="telefone" name="telefone" value="${cliente.telefone}" type="tel" class="form-control" >
+						<input required id="telefone" name="telefone" value="${cliente.telefone}" type="tel" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="celular">Celular</label>
-						<input id="celular" name="celular" value="${cliente.celular}" type="tel" class="form-control" >
+						<input required id="celular" name="celular" value="${cliente.celular}" type="tel" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="dataNascimento">Data de Nascimento</label>
-						<input id="dataNascimento" name="dataNascimento" value="${cliente.dataNascimento}" type="date" class="form-control" >
+						<input required id="dataNascimento" name="dataNascimento" value="${cliente.dataNascimento}" type="date" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cpfCnpj">CPF/CNPJ</label>
-						<input id="cpfCnpj" name="cpfCnpj" value="${cliente.cpfCnpj}" type="text" class="form-control" >
+						<input required id="cpfCnpj" name="cpfCnpj" value="${cliente.cpfCnpj}" type="text" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="cep">CEP</label>
-						<input id="cep" name="cep" value="${cliente.cep}" type="text" class="form-control" >
+						<input required id="cep" name="cep" value="${cliente.cep}" type="text" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="numeroEndereco">Número do endereço</label>
-						<input id="numeroEndereco" name="numeroEndereco" value="${cliente.numeroEndereco}" type="number" class="form-control" >
+						<input required id="numeroEndereco" name="numeroEndereco" value="${cliente.numeroEndereco}" type="number" class="form-control" >
 					</div>
 					<div class="form-group col-12 col-md-6 align-self-center">
 						<label for="planoSaude">Plano de saúde</label>
-						<input id="planoSaude" name="planoSaude" value="${cliente.planoSaude}" type="text" class="form-control" >
+						<input required id="planoSaude" name="planoSaude" value="${cliente.planoSaude}" type="text" class="form-control" >
 					</div>					
 					<input type="hidden" name="pacote" value="cliente.">
 					<input type="hidden" name="id" value="${cliente.id}")>

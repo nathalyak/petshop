@@ -25,6 +25,22 @@ public class Conexao {
 
 		return statement;
 	}
+	public static Connection conectaDelete() throws SQLException {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		connection =DriverManager.getConnection("jdbc:mysql://localhost/dbPetShop?"
+				+ "user=root&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false"
+				+ "&serverTimezone=UTC");
+		
+		System.out.println("conectado com o banco de dados");
+		
+
+		return connection;
+	}
 	
 	
 	public static void desconecta() throws SQLException {

@@ -55,11 +55,11 @@
 				<div class="row">
 					<div class="form-group col-12">
 						<label for="nomePet">Nome do pet</label>
-  						<input id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}">
+  						<input required id="nomePet" name="nomePet" type="text" class="form-control" value="${pet.nomePet}">
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idDono">Responsável</label>						
-						<select id="idDono" name="idDono" class="form-control">
+						<select required id="idDono" name="idDono" class="form-control">
 						    <c:forEach  items="${listaNome}" var="clientes">
 						        <option value="<c:out value='${clientes.id}'/>"
 						            <c:if test="${clientes.id == pet.idDono}"> 
@@ -73,15 +73,15 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="especie">Espécie</label>
-  						<input id="especie" name="especie" type="text" class="form-control" value="${pet.especie}">
+  						<input required id="especie" name="especie" type="text" class="form-control" value="${pet.especie}">
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="raca">Raça</label>
-  						<input id="raca" name="raca" type="text" class="form-control" value="${pet.raca}">
+  						<input required id="raca" name="raca" type="text" class="form-control" value="${pet.raca}">
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="porte">Porte</label>
-  						<input id="porte" name="porte" type="text" class="form-control" value="${pet.porte}">
+  						<input required id="porte" name="porte" type="text" class="form-control" value="${pet.porte}">
 					</div>
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">
 						<button id="button-style" type="submit" class="btn">Editar</button>

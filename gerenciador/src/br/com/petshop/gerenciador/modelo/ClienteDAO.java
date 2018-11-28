@@ -1,5 +1,6 @@
 package br.com.petshop.gerenciador.modelo;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -61,28 +62,29 @@ public class ClienteDAO {
 		String sqlDeletaAgendamento="delete agendamento.* "
 				+ " from agendamento where agendamento.fkCliente='"+index+"';";
 		
-		PreparedStatement statement;
+		Connection conD;
 		
 		try {
 		
-			statement = con.conecta(sqlDeletaAgendamento);
+			conD = con.conectaDelete();
+			PreparedStatement statement3 = conD.prepareStatement(sqlDeletaAgendamento);
+			statement3.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement3.executeUpdate();
+			statement3.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			
+			PreparedStatement statement2 = conD.prepareStatement(sqlDeletaPet);
+			statement2.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement2.executeUpdate();
+			statement2.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			PreparedStatement statement = conD.prepareStatement(sql);
 			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
 			statement.executeUpdate();
 			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
-			
-			statement = con.conecta(sqlDeletaPet);
-			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
-			statement.executeUpdate();
-			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
-			
-			statement = con.conecta(sql);
-			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
-			statement.executeUpdate();
-			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
-			
+
 			con.desconecta();
 			
-			con.desconecta();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

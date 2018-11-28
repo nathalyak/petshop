@@ -55,7 +55,7 @@
 				<div class="row">
 					<div class="form-group col-12">
 						<label for="idVeterinario">Selecione um veterinário:</label>
-  						<select name="idVeterinario">
+  						<select required  name="idVeterinario">
 						    <c:forEach  items="${listaNomeV}" var="veterinarios">
 						        <option value="<c:out value='${veterinarios.idVeterinario}'/>">
 						            <c:out value="${veterinarios.nomeVeterinario}" />
@@ -65,7 +65,7 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idPet">Selecione um Pet:</label>
-  						<select name="idPet">
+  						<select required  name="idPet">
 						    <c:forEach  items="${listaNomeP}" var="pets">
 						        <option value="<c:out value='${pets.idPet}'/>">
 						            <c:out value="${pets.nomePet}" />
@@ -75,7 +75,7 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idCliente">Selecione um cliente:</label>
-  						<select name="idDono">
+  						<select required name="idDono">
 						    <c:forEach  items="${listaNomeC}" var="clientes">
 						        <option value="<c:out value='${clientes.id}'/>">
 						            <c:out value="${clientes.nome}" />
@@ -85,11 +85,11 @@
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="idCliente">Selecione uma data:</label>
-  						<input id="idCliente" name="data" type="date" class="form-control">
+  						<input required id="idCliente" name="data" type="date" class="form-control">
 					</div>
 					<div class="form-group col-12 col-md-6">
 						<label for="hora">Selecione um horário:</label>
-  						<input id="hora" name="hora" type="time" class="form-control">
+  						<input required id="hora" name="hora" type="time" class="form-control">
 					</div>
 					<input type="hidden" name="pacote" value="agendamento.">
 					<div class="col-12 col-md-6 offset-md-3 align-self-center">

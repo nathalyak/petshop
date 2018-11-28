@@ -1,5 +1,6 @@
 package br.com.petshop.gerenciador.modelo;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -56,14 +57,27 @@ public class VeterinarioDAO {
 	
 	public void removeVeterinario(int index) {
 		// TODO Auto-generated method stub
-		String sql="delete from "
-				+ "veterinario where pkVeterinario="+index;
-		
-		PreparedStatement statement;
+		String sqlDeletaVet = "delete veterinario.* "
+				+ " from veterinario where pkVeterinario='"+index+"';";
+		String sqlDeletaAgendamento="delete agendamento.* "
+				+ " from agendamento where agendamento.fkVeterinario='"+index+"';";
+		Connection conD;
+
 		
 		try {
-			statement = con.conecta(sql);
-			statement.executeUpdate();
+			
+			conD = con.conectaDelete();
+			PreparedStatement statement3 = conD.prepareStatement(sqlDeletaAgendamento);
+			statement3.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement3.executeUpdate();
+			statement3.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			
+			PreparedStatement statement2 = conD.prepareStatement(sqlDeletaVet);
+			statement2.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement2.executeUpdate();
+			statement2.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
 			con.desconecta();
 			
 		} catch (SQLException e) {
