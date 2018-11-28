@@ -54,26 +54,33 @@ public class ClienteDAO {
 	
 	public void removeCliente(int index) {
 		// TODO Auto-generated method stub
-		String sql="delete cliente.*, pet.* from "
-				+ "cliente, pet where cliente.pkCliente='"+index+"' "
-				+ " AND pet.pkDono='"+index+"';";
+		String sql="delete cliente.* from "
+				+ "cliente where cliente.pkCliente='"+index+"';";
+		String sqlDeletaPet = "delete pet.* "
+				+ " from pet where pet.pkDono='"+index+"';";
 		String sqlDeletaAgendamento="delete agendamento.* "
 				+ " from agendamento where agendamento.fkCliente='"+index+"';";
 		
 		PreparedStatement statement;
 		
 		try {
-			statement = con.conecta(sql);
-			
-			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
-			statement.executeUpdate();
-			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
-			con.desconecta();
-			
+		
 			statement = con.conecta(sqlDeletaAgendamento);
 			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
 			statement.executeUpdate();
 			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			statement = con.conecta(sqlDeletaPet);
+			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement.executeUpdate();
+			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			statement = con.conecta(sql);
+			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement.executeUpdate();
+			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			con.desconecta();
 			
 			con.desconecta();
 			

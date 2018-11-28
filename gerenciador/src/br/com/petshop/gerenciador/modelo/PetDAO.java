@@ -42,15 +42,24 @@ public class PetDAO {
 	
 	public void removePet(int index) {
 		// TODO Auto-generated method stub
-		String sql="delete from "
-				+ "pet where pkPet="+index;
+		String sqlDeletaPet = "delete pet.* "
+				+ " from pet where pkPet='"+index+"';";
+		String sqlDeletaAgendamento="delete agendamento.* "
+				+ " from agendamento where agendamento.fkPet='"+index+"';";
 		
 		PreparedStatement statement;
 		
 		try {
-			statement = con.conecta(sql);
+		
+			statement = con.conecta(sqlDeletaAgendamento);
+			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
 			statement.executeUpdate();
-			con.desconecta();
+			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
+			
+			statement = con.conecta(sqlDeletaPet);
+			statement.execute("SET FOREIGN_KEY_CHECKS=0;");
+			statement.executeUpdate();
+			statement.execute("SET FOREIGN_KEY_CHECKS=1;");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
