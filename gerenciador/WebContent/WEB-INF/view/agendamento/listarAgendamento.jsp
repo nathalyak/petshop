@@ -62,14 +62,13 @@
 					<li id="info-lista" class="row">
 						<h5 class="col-4 col-md-9">Nome do cliente</h5>
 						<h5 class="col-2 col-md-1">Dados</h5>
-						<h5 class="col-2 col-md-1">Editar</h5>
 						<h5 class="col-2 col-md-1">Excluir</h5>
 					</li> 
 					<c:forEach items="${listaNome}" var="agendamentos">
 						<li class="row">
-							<p class="col-4 col-md-9">${agendamentos.idAgendamento} | ${agendamentos.nomeCliente} | ${agendamentos.data} | ${agendamentos.hora}</p>
-							<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Exibe&id=${agendamentos.idAgendamento}" ><img class="icon-lista" src="./static/image/informacoes.svg">Exibir</a>
-							<a href="paginas?acao=RemoveAgendamento&pacote=agendamento.&id=${agendamentos.idAgendamento}"><img class="icon-lista" src="./static/image/lixo.svg">Remover</a>
+							<p class="col-4 col-md-9">${agendamentos.nomeCliente} | ${agendamentos.data} | ${agendamentos.hora}</p>
+							<a class="col-2 col-md-1" href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Exibe&id=${agendamentos.idAgendamento}" ><img class="icon-lista" src="./static/image/informacoes.svg"></a>
+							<a class="col-2 col-md-1" href="paginas?acao=RemoveAgendamento&pacote=agendamento.&id=${agendamentos.idAgendamento}"><img class="icon-lista" src="./static/image/lixo.svg"></a>
 						</li> 
 					</c:forEach>
 				</ul>
