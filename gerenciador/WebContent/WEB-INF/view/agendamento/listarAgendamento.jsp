@@ -68,9 +68,8 @@
 					<c:forEach items="${listaNome}" var="agendamentos">
 						<li class="row">
 							<p class="col-4 col-md-9">${agendamentos.idAgendamento} | ${agendamentos.nomeCliente} | ${agendamentos.data} | ${agendamentos.hora}</p>
-							<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Exibe&id=${agendamentos.idAgendamento}" ><img class="icon-lista" src="./static/image/informacoes.svg"></a>
-							<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Altera&id=${agendamentos.idAgendamento}" ><img class="icon-lista" src="./static/image/lapis.svg"></a>
-							<a href="paginas?acao=RemoveAgendamento&pacote=agendamento.&id=${agendamentos.idAgendamento}"><img class="icon-lista" src="./static/image/lixo.svg">s</a>
+							<a href="paginas?acao=MostraAgendamento&pacote=agendamento.&tipo=Exibe&id=${agendamentos.idAgendamento}" ><img class="icon-lista" src="./static/image/informacoes.svg">Exibir</a>
+							<a href="paginas?acao=RemoveAgendamento&pacote=agendamento.&id=${agendamentos.idAgendamento}"><img class="icon-lista" src="./static/image/lixo.svg">Remover</a>
 						</li> 
 					</c:forEach>
 				</ul>

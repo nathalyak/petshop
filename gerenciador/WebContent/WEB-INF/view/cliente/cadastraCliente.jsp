@@ -95,6 +95,9 @@
 			<script src="./static/js/jquery.js"></script>
 			<script src="./static/js/popper.min.js"></script>
 			<script src="./static/js/bootstrap.min.js"></script>
+			<script src="./static/js/jquery.mask.min.js"></script>
+			<script src="./static/js/jquery.mask.js"></script>
+			<script src="./static/js/mascaras.js"></script>
 			<script type="text/javascript">
 				$('.dropdown-toggle').dropdown()
 			</script>

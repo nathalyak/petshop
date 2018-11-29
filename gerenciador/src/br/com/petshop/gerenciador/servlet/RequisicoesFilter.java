@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.petshop.gerenciador.acoes.Acao;
+import br.com.petshop.gerenciador.controller.Acao;
 
 /**
  * Servlet Filter implementation class RequisicoesFilter
@@ -28,7 +28,7 @@ public class RequisicoesFilter implements Filter {
 		String acao = request.getParameter("acao");
 		String pacote = request.getParameter("pacote");
 		if(pacote==null)pacote="";
-		String nomeClasse ="br.com.petshop.gerenciador.acoes."+pacote+acao;
+		String nomeClasse ="br.com.petshop.gerenciador.controller."+pacote+acao;
 		String nomePagina=null;
 
 		try {
